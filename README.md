@@ -12,6 +12,8 @@ A deep learning–based monitoring system that detects inactivity, abnormal move
 ## Dataset
 - UCI "Activity Recognition with Healthy Older People" Dataset
 - Alternative: "AI for Elderly Care and Support" from Kaggle
+- A small `sample.csv` is provided for quick testing only.
+
 
 ## How to Run
 - pip install -r requirements.txt
@@ -37,3 +39,4 @@ Deploy using Flask + Render or Heroku. Add requirement.txt and Procfile for depl
 - UCI Elderly Activity Dataset [web:12]
 - Flask Deployment Tutorials [web:7][web:16][web:19]
 - Fall Risk DNN Models [web:5]
+
