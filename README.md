@@ -1,3 +1,4 @@
+
 # AI Copilot for Elderly Healthcare Monitoring 🧠💊
 
 ## Overview
@@ -39,4 +40,9 @@ Deploy using Flask + Render or Heroku. Add requirement.txt and Procfile for depl
 - UCI Elderly Activity Dataset [web:12]
 - Flask Deployment Tutorials [web:7][web:16][web:19]
 - Fall Risk DNN Models [web:5]
+
+---
+
+### Test the app lively
+- https://aicopilot-elder-monitoring.onrender.com/
 
