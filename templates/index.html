@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Copilot Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Elderly Health Monitoring - AI Copilot</h2>
+    <form action="/predict" method="post">
+        Heart Rate: <input type="number" name="heart_rate"><br>
+        Blood Pressure: <input type="number" name="blood_pressure"><br>
+        Glucose Levels: <input type="number" name="glucose_level"><br>
+        Oxygen Saturation (SpO₂%): <input type="number" name="oxygen_saturation"><br>
+        Alert Triggered (1=Yes, 0=No): <input type="number" name="alert_triggered"><br>
+        Caregiver Notified (1=Yes, 0=No): <input type="number" name="caregiver_notified"><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
