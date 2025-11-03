@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction History - AI Copilot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Your Prediction History</h2>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <tr>
+            <th>Date & Time</th>
+            <th>Heart Rate</th>
+            <th>Blood Pressure</th>
+            <th>Glucose</th>
+            <th>Oxygen</th>
+            <th>Alert Triggered</th>
+            <th>Caregiver Notified</th>
+            <th>Prediction Status</th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <td>{{ log.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>{{ log.heart_rate }}</td>
+            <td>{{ log.blood_pressure }}</td>
+            <td>{{ log.glucose }}</td>
+            <td>{{ log.oxygen }}</td>
+            <td>{{ 'Yes' if log.alert_triggered else 'No' }}</td>
+            <td>{{ 'Yes' if log.caregiver_notified else 'No' }}</td>
+            <td>{{ log.prediction }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="{{ url_for('home') }}">Make New Prediction</a> | <a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>
